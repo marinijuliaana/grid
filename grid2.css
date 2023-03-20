@@ -9,35 +9,42 @@ main {
     background-color: antiquewhite;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 15vw 70vw 15vw;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px 500px 100px;
 }
 
 header, nav, article, footer {
     font-size: 2rem;
     padding: 20px;
     border: 5px solid black;
-    display: center;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
 header {
     background-color: pink;
-    grid-column: span 3;
+    grid-column-start: 1;
+    grid-column-end: 13;
 }
 
 nav {
     background-color: violet;
-    grid-column: 1 span;
+    grid-column-start: -1;
+    grid-column-end: -5;
+    grid-row-start: -2;
+    grid-row-end: -3;
+
 }
 
 article {
     background-color: darkmagenta;
-    grid-column: 2 span;
+    grid-column-start: 1;
+    grid-column-end: 9;
 }
 
 footer {
     background-color: darkorchid;
-    grid-column: span 3;
+    grid-column-start: 1;
+    grid-column-end: 13;
 }
